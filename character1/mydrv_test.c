@@ -12,13 +12,13 @@ int main(void)
 		perror("open error");
 		return -1;
 	}
-	for (int i = 0; i < MAX_BUFFER; ++i)
+	for (i = 0; i < MAX_BUFFER; ++i)
 	{
 		buf_out[i] = c++;
 		buf_in[i] = 65;
 	}
 
-	for (int i = 0; i < MAX_BUFFER; ++i)
+	for (i = 0; i < MAX_BUFFER; ++i)
 	{
 		fprintf(stderr, "%c", buf_in[i]);
 	}
@@ -27,7 +27,7 @@ int main(void)
 	write(fd, buf_out, MAX_BUFFER);
 	read(fd, buf_in, MAX_BUFFER);
 
-	for (int i = 0; i < MAX_BUFFER; ++i)
+	for (i = 0; i < MAX_BUFFER; ++i)
 	{
 		fprintf(stderr, "%c", buf_in[i]);
 	}
